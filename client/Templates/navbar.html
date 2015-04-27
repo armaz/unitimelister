@@ -1,0 +1,15 @@
+<template name="navbar">
+    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li {{navActiveClass 'dayView'}}><a href="{{dayViewUrl }}">I dag</a></li>
+            <li {{navActiveClass 'weekView'}}><a href="{{weekViewUrl}}">Uke</a></li>
+            <li {{navActiveClass 'activitiesView'}}><a href="{{activitiesViewUrl}}">Aktiviteter</a></li>
+        </ul>
+        {{#if currentUser}}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"> {{> loginButtons}}</a></li>
+            </ul>
+        {{/if}}
+    </div><!-- /.navbar-collapse -->
+
+</template>

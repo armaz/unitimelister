@@ -1,0 +1,21 @@
+<template name="jobItem">
+    <tr class="job-item  {{unsaved_class}}job" data-jobname="{{name}}">
+    <td>{{name}}</td>
+    <td class="timer">{{timer}}</td>
+    <td>
+        {{>ctrl value="-1"}}
+        {{>ctrl value="-0.5"}}
+        {{>ctrl value="+0.5"}}
+        {{>ctrl value="+1"}}
+    </td>
+
+
+</tr>
+
+</template>
+
+
+
+<template name="ctrl">
+    <div class="btn btn-default change-time" data-value="{{value}}">{{value}}</div>
+</template>

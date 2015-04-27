@@ -1,0 +1,37 @@
+
+@green-shadow-color: #D3EDDA;
+@red-shadow-color: #f21818;
+
+.green-shadow {
+  -webkit-box-shadow: 0px 10px 20px 6px @green-shadow-color;
+  -moz-box-shadow: 0px 10px 20px 6px @green-shadow-color;
+  box-shadow: 0px 3px 10px 6px @green-shadow-color;
+}
+
+.red-shadow {
+  -webkit-box-shadow: 0px 3px 20px 6px  @red-shadow-color;
+  -moz-box-shadow: 0px 3px 20px 6px  @red-shadow-color;
+  box-shadow: 0px 3px 20px 6px  @red-shadow-color;
+
+
+}
+
+.daytime-box {
+  border-style : solid;
+  border-radius : 3px;
+  padding : 4px 4px 0px 4px;
+}
+
+.noktimer {
+  //.green-shadow;
+  .daytime-box;
+  border-color: @green-shadow-color;
+  background-color: @green-shadow-color;
+}
+
+.ikkenoktimer {
+  //.red-shadow;
+  .daytime-box;
+  border-color: @red-shadow-color;
+  background-color: @red-shadow-color;
+}

@@ -1,0 +1,40 @@
+<template name="dayView">
+    <div id="dayView" class="transitions-content" data-dayid="{{_id}}" data-day="{{day.day}}" data-week="{{day.week}}" data-year="{{day.year}}" >
+        <div class="day-top-info">Uke {{datestring}} </div>
+        <div class="daytotal">Totalt : <span class="{{timerclass}}timer">{{daytotalt}}</span></div>
+
+        <!--<div class="wrapper">-->
+        <table class="table">
+            <tbody>
+            {{#each jobs}}
+                
+                
+                    {{> jobItem}}
+                
+                
+            {{/each}}
+            </tbody>
+        </table>
+        <div id="new-activity-div">
+            <button id="new-activity-btn" class="btn btn-default">Legg til aktivitet</button>
+            <input id="new-activity" style="display:none"/>
+        </div>
+        <!--</div>-->
+        <hr/>
+        <!--
+        <div class="btn btn-default" id="A">A</div>
+        <div class="btn btn-default" id="B">B</div>
+        <div class="btn btn-default" id="C">C</div>
+        <div class="btn btn-default" id="D">D</div>
+        -->
+    <div id="prevnext">
+        <div id="prevday" class="pull-left">
+            <div class="btn btn-default"><a href="{{prevDayUrl}}" data-transition-out="slideLeftOut" data-transition-in="slideLeftIn" >Forrige</a></div>
+        </div>
+        <div id="nextday" class="pull-right">
+            <div class="btn btn-default"><a href="{{nextDayUrl}}" data-transition-out="slideLeftOut" data-transition-in="slideLeftIn" >Neste</a></div>
+        </div>
+    </div>
+    </div>
+</template>
+

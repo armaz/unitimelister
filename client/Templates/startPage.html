@@ -1,0 +1,26 @@
+<template name="startPage">
+
+    {{#if currentUser}}
+        {{#if firsttime}}
+            <div>Det ser ut som du er en nykommer her. velkommen.<br/>
+                Du bør først gå til "Aktiviteter" og sette opp noen aktiviteter som du kan registrere timer på.
+
+            </div>
+        {{else}}
+
+        {{/if}}
+
+        <div class="container">
+            <button id="goToToday" class="btn btn-default" ><a href="{{toDayUrl}}">Gå til dagens timeliste</a></button>
+            <button id="goToActivities" class="btn btn-default" ><a href="{{activitiesUrl}}">Aktiviteter</a></button>
+        </div>
+
+        {{else}}
+        <div class="container">
+            <div id="logg-inn-first" class="center-block bg-info">Hei ukjent! <br />Du må logge inn først {{> loginButtons}}</div>
+        </div>
+    {{/if}}
+
+</template>
+
+

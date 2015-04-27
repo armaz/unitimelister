@@ -1,0 +1,238 @@
+@body-bkgrnd-clr : yellow;
+@el-bkgrnd-clr :lightblue; /*#A2D3F6;*/
+@unsaved-bkgrnd-clr :#D2F3FF;
+@hdr-bkgrnd-clr:;
+@activity-row-clr: #ffffff;
+
+
+
+.container {
+    height: 100%;
+}
+
+body{
+    background-color: @body-bkgrnd-clr; /*whitesmoke;*/
+    color :black;
+}
+
+.jobitem > div{
+    display: inline-block;
+    padding: 10px;
+    background-color: red;
+}
+
+.job-item.unsavedjob {
+    background-color: @unsaved-bkgrnd-clr;
+}
+
+.job-item.savedjob {
+    background-color: @el-bkgrnd-clr;
+}
+
+.job-item td.timer {
+    width: 43px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+.job-control-item{
+    margin-bottom: 20px;
+    padding: 10px;
+    display: inline;
+}
+
+.day-top-info {
+
+    display: inline-block;
+}
+
+table td {
+    padding: 4px;
+    padding-top: 10px;
+
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #f9f9f9;
+}
+
+/*
+.change-time {
+    color: lightblue;
+}*/
+
+.daytotal{
+    display: inline-block;
+    margin-left: 30px;
+
+}
+
+.daytotal .timer{
+    font-weight: bolder;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    padding: 2px;
+
+}
+
+#login-buttons a{
+    text-decoration: none;
+
+}
+
+#login-buttons:hover a{
+    text-decoration: none;
+
+}
+
+#logg-inn-first{
+    max-width: 400px;
+    padding: 10px 30px;
+    font-size: x-large;
+}
+
+#prevnext{
+    background-color: #f5f5f5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#prevday {
+    margin-left: 20px;
+}
+#nextday {
+    margin-right: 20px;
+}
+
+/****
+
+    Activities
+
+*****/
+
+.activityHead{
+    display: inline-block;
+    font-size: x-large;
+}
+#add-activity {
+    display: inline-block;
+}
+
+.acElement{
+    display: inline-block;
+}
+
+#activities-table-header{
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (min-width: 991px) {
+    .acElementTitlesmall {
+        display: none;
+    }
+    .removeBtnSmall{
+        display : none;
+    }
+    div.row.activity {
+        margin-bottom: 10px;
+    }
+    .editableform .form-control .input-sm{
+        position: absolute;
+        z-index: 1000;
+    }
+    .removeBtnLarge{
+        display: inline-block;
+        float: right;
+    }
+    #activities-list{
+        background-color: @activity-row-clr;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .acElementTitlesmall {
+        display: inline-block;
+        font-weight: bold;
+        min-width: 100px;
+    }
+    .removeBtnSmall{
+        float: right;
+    }
+
+    #activities-table-header {
+        display: none;
+
+    }
+
+    div.row.activity {
+        margin-bottom: 15px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+        background-color: @activity-row-clr;
+
+    }
+
+    .panel-default {
+        background-color: #F5F5F5;
+        border-style: none;
+    }
+
+    div.row div.col{
+        margin-bottom: 10px;
+    }
+
+    .firstCol{
+        margin-top: 10px;
+    }
+
+    .removeBtnLarge{
+        display: none;
+    }
+
+    #activities-list{
+        background-color: @body-bkgrnd-clr;
+    }
+
+}
+
+
+
+.job-day-row.row{
+    text-align: center;
+    background-color:  #D2F3FF;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.job-day-row.job-day-header.row {
+    background-color :@el-bkgrnd-clr;
+}
+
+.job-day-row.job-day-footer.row {
+    background-color :@el-bkgrnd-clr;
+}
+
+#weekView{
+    height:100%;
+}
+
+#weekTitle{
+    font-size: large;
+    font-weight: bolder;
+}
+/*
+#login-dropdown-list {
+    position: absolute;
+    top: 30px;
+    left: -200px;
+}*/
+

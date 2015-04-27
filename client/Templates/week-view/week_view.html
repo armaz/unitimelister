@@ -1,0 +1,57 @@
+<template name="weekView">
+
+
+    <div id="weekView" >
+    <!-- HEADER weekday-->
+
+	        <div class="job-day-row job-day-header row">
+	        	<div class="col-xs-4" id="weekTitle">Uke {{weeknr}}, {{yearnr}}</div>
+	        	<div class="col-xs-1">Man<br/>{{date 1}}</div>
+	        	<div class="col-xs-1">Tir<br/>{{date 2}}</div>
+	        	<div class="col-xs-1">Ons<br/>{{date 3}}</div>
+	        	<div class="col-xs-1">Tors<br/>{{date 4}}</div>
+	        	<div class="col-xs-1">Fre<br/>{{date 5}}</div>
+	        	<div class="col-xs-1">Lør<br/>{{date 6}}</div>
+	        	<div class="col-xs-1">Søn<br/>{{date 7}}</div>
+	        </div>
+	        {{#each jobs}}
+	            {{> jobDayRow}}
+	        {{/each}}
+    <!-- Sum -->
+	        <div class="job-day-row job-day-footer row">
+	        	<div class="col-xs-4">Totalt</div>
+	        	<div class="col-xs-1">{{sum 1}}</div>
+	        	<div class="col-xs-1">{{sum 2}}</div>
+	        	<div class="col-xs-1">{{sum 3}}</div>
+	        	<div class="col-xs-1">{{sum 4}}</div>
+	        	<div class="col-xs-1">{{sum 5}}</div>
+	        	<div class="col-xs-1">{{sum 6}}</div>
+	        	<div class="col-xs-1">{{sum 7}}</div>
+
+	        </div>
+    </div>		
+    <div id="prevnext">
+        <div id="prevday" class="pull-left">
+            <div class="btn btn-default"><a href="{{prevWeekUrl}}" data-transition-out="slideLeftOut" data-transition-in="slideLeftIn" >Forrige</a></div>
+        </div>
+        <div id="nextday" class="pull-right">
+            <div class="btn btn-default"><a href="{{nextWeekUrl}}" data-transition-out="slideLeftOut" data-transition-in="slideLeftIn" >Neste</a></div>
+        </div>
+    </div>
+
+</template>
+
+<template name="jobDayRow">
+	<div class="job-day-row  row">
+		<div class="job-name col-xs-4">{{this}}</div>
+		<div class="job-time col-xs-1">{{time this 1}}</div>
+		<div class="job-time col-xs-1">{{time this 2}}</div>
+		<div class="job-time col-xs-1">{{time this 3}}</div>
+		<div class="job-time col-xs-1">{{time this 4}}</div>
+		<div class="job-time col-xs-1">{{time this 5}}</div>
+		<div class="job-time col-xs-1">{{time this 6}}</div>
+		<div class="job-time col-xs-1">{{time this 7}}</div>
+			
+	</div>
+</template>
+

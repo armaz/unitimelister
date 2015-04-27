@@ -1,0 +1,67 @@
+<template name="activitiesView">
+
+    <div class="clearfix">
+        <div class="activityHead">Aktivitetene mine</div>
+        <div id="add-activity" class=" pull-right btn btn-default btn-large">Add</div>
+    </div>
+    <div class="panel panel-default">
+
+        <div id="activities-list" class="container-fluid">
+            <div id="activities-table-header" class="row titleLarge">
+                <div class="col-md-2">Tittel</div>
+                <div class="col-md-2">Prosjektnavn</div>
+                <div class="col-md-2">Prosjektnr</div>
+                <div class="col-md-2">Aktivitetsnavn</div>
+                <div class="col-md-2">Aktivitetnr</div>
+                <div class="col-md-1">Budsjettert</div>
+            </div>
+            {{#each activities}}
+                <div class="row activity">
+                    <div class="col col-md-2 firstCol">
+                        <div class="acElementTitlesmall">Tittel</div>
+                        <div class="acElement">{{> editableSpan collection="Activities" field="name" doc=this}}</div>
+                        <div class="removeBtnSmall">{{> removebtn activityid=_id}}</div>
+                    </div>
+                    <div class="col col-md-2">
+                        <div class="acElementTitlesmall">Prosjektname</div>
+                        <div class="acElement">{{> editableSpan collection="Activities" data-emptytext="Love me" field="project_name" doc=this }}</div>
+                    </div>
+                    <div class="col col-md-2">
+                        <div class="acElementTitlesmall">Prosjektnr</div>
+                        <div class="acElement">{{> editableSpan collection="Activities" field="project_nr" doc=this }}</div>
+                    </div>
+                    <div class="col col-md-2">
+                        <div class="acElementTitlesmall">Aktivitetsnavn</div>
+                        <div class="acElement">{{> editableSpan collection="Activities" field="activity_name" doc=this }}</div>
+                    </div>
+                    <div class="col col-md-2">
+                        <div class="acElementTitlesmall">Aktivitetnr</div>
+                        <div class="acElement">{{> editableSpan collection="Activities" field="activity_nr" doc=this }}</div>
+                    </div>
+                    <div class="col col-md-1">
+                        <div class="acElementTitlesmall">Budsjettert tid</div>
+                        <div class="acElement">{{> editableSpan collection="Activities" field="budget" doc=this }}</div>
+                    </div>
+                    <div class="removeBtnLarge">{{> removebtn activityid=_id}}</div>
+
+                </div>
+            {{/each}}
+        </div>
+
+
+
+    </div>
+</template>
+
+
+<template name="editableSpan">
+    <span {{attrs}} class="editable"></span>
+</template>
+
+<template name="editableDiv">
+    <div {{attrs}} class="editable"></div>
+</template>
+
+<template name="removebtn">
+    <div class="btn btn-default remove-btn" data-activityid={{activityid}}>X</div>
+</template>
